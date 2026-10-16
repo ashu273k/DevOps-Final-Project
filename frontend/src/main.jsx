@@ -103,7 +103,7 @@ function App() {
             <p>Build, deploy and observe your application.</p>
           </div>
           <div className="profile">
-            <div className="avatar">NR</div>
+            <div className="avatar">AR</div>
             <div>
               <b>Aashu</b>
               <small>Developer</small>
@@ -116,7 +116,7 @@ function App() {
         <header>
           <div>
             <p className="eyebrow">WORKSPACE / OVERVIEW</p>
-            <h1>Good morning, Nensi.</h1>
+            <h1>Good morning, Aashu.</h1>
             <p className="muted">
               A clear view of what needs your attention today.
             </p>
@@ -292,7 +292,7 @@ function App() {
                 </label>
                 <label>
                   Assignee
-                  <input name="assignee" defaultValue="Nensi Ravaliya" />
+                  <input name="assignee" defaultValue="Aashu Ravaliya" />
                 </label>
               </div>
               <button className="primary full">Create task</button>
