@@ -56,19 +56,23 @@ jobs:
       - name: Build frontend image
         run: docker build -t "${FRONTEND_IMAGE}:${GITHUB_SHA}" ./frontend
       - name: Scan backend image with Trivy
-        uses: aquasecurity/trivy-action@v0.31.0
+        uses: aquasecurity/trivy-action@v0.33.1
         with:
           image-ref: ${{ env.BACKEND_IMAGE }}:${{ github.sha }}
           severity: HIGH,CRITICAL
           ignore-unfixed: true
           exit-code: "1"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
       - name: Scan frontend image with Trivy
-        uses: aquasecurity/trivy-action@v0.31.0
+        uses: aquasecurity/trivy-action@v0.33.1
         with:
           image-ref: ${{ env.FRONTEND_IMAGE }}:${{ github.sha }}
           severity: HIGH,CRITICAL
           ignore-unfixed: true
           exit-code: "1"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
       - name: Push SHA-tagged images to GHCR
         run: |
           docker push "${BACKEND_IMAGE}:${GITHUB_SHA}"
