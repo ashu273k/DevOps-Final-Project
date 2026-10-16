@@ -41,6 +41,10 @@ troubleshooting/         Deliberately broken Kubernetes examples
 demo/                    Final presentation slides and video
 ```
 
+## Modular DevOps Documentation
+
+The implementation is documented by topic in [`docs/README.md`](docs/README.md). The docs cover local development, CI/CD and security gates, Terraform and AWS, Kubernetes and Helm, observability, and screenshot-based submission evidence.
+
 ## Run Locally with Docker Compose
 
 Requirements:
