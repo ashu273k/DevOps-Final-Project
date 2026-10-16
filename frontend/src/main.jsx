@@ -77,9 +77,9 @@ function App() {
     <div className="app">
       <aside className="sidebar">
         <div className="brand">
-          <span className="brand-mark">T</span>
+          <span className="brand-mark">F</span>
           <div>
-            <b>TaskBoard</b>
+            <b>f-FreeFlow</b>
             <small>DevOps Capstone</small>
           </div>
         </div>
